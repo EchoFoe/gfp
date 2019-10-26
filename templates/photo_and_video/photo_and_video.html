@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="home_banner_area banner-area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner_content d-flex flex-md-row flex-column">
+                        <div class="banner-left text-md-right">
+                            <h1 class="text-uppercase">Фото & видео</h1>
+                        </div>
+                        <div class="banner-right position-relative">
+                            <p>Здесь Вы можете ознакомиться с турнирами, которые федерация GFP провела</p>
+                            <span class="main_btn mt-4 mt-md-0" href="#">
+                                <a href="{% url 'home' %}" class="text-white">Домашняя</a>
+                                <i class="fa fa-arrow-right mx-2"></i>
+                                <a href="{% url 'photo_and_video' %}" class="text-white">Фото и видео</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog_area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    {% for tournaments in held_tournaments  %}
+                        {% include 'photo_and_video/photo_and_video_item.html' %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_right_sidebar">
+                    <aside class="single_sidebar_widget instagram_feeds">
+                        <h4 class="widget_title">Все фотографии</h4>
+                        <ul class="instagram_row flex-wrap">
+                            {% for tournaments in held_tournaments  %}
+                                {% include 'photo_and_video/photo_and_video_vk_url.html' %}
+                            {% endfor %}
+                        </ul>
+                    </aside>
+                    <aside class="single_sidebar_widget instagram_feeds">
+                        <h4 class="widget_title">Все видео</h4>
+                        <ul class="instagram_row flex-wrap">
+                            {% for tournaments in held_tournaments  %}
+                                {% include 'photo_and_video/photo_and_video_youtube_url.html' %}
+                            {% endfor %}
+                        </ul>
+                    </aside>
+                    <aside class="single_sidebar_widget newsletter_widget">
+                        <h4 class="widget_title">Подпишитесь на новости</h4>
+                        <form action="#" method="post">{% csrf_token %}
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="{{ form.email.name }}" value="{{ request.POST.name}}" placeholder="Введите Ваш email" required>
+                            </div>
+                            <button class="button main_btn w-100" type="submit">Подписаться!</button>
+                        </form>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

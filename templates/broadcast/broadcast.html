@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="service-area section_gap_top">
+    <div class="container">
+        {% for broadcasts in broadcasts  %}
+                {% include 'broadcast/broadcast_item.html' %}
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}
+

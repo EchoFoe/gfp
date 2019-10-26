@@ -1,0 +1,1 @@
+default_app_config = "doping_testing.apps.DopingAppConfig"

@@ -1,0 +1,12 @@
+<div class="single_testi">
+    <div class="testi_content">
+        <p class="text-center">{{ tournaments.tournament.name }}</p>
+    </div>
+    <div class="testi_author d-flex justify-content-center align-items-center">
+        <div class="a-desc text-left">
+            <h6 class="text-center">Дата начала турнира: {{ tournaments.tournament.start_time|date:"F j, Y" }}</h6>
+            <h6 class="text-center">Дата начала турнира: {{ tournaments.tournament.end_time|date:"F j, Y" }}</h6>
+            <p class="text-center">Город: {{ tournaments.tournament.town }}</p>
+        </div>
+    </div>
+</div>

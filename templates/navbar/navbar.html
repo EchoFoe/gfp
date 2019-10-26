@@ -1,0 +1,140 @@
+{% load static %}
+
+<header class="header_area">
+    <div class="top_menu d-lg-block d-none">
+        <div class="container">
+            <div class="float-left">
+                <ul class="left_side">
+                    <li>
+                        <a href="https://vk.com/gfp_russia" target="_blank">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCkl_H2rZgYm6CdU6Hc6kXHA?view_as=subscriber" target="_blank">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/konstantinov_gfp/" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="float-right">
+                <ul class="right_side">
+                    <li>
+                        <a href="#">
+                            <i class="lnr lnr-phone-handset"></i>8-(4712)58-91-33
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="lnr lnr-envelope"></i>info@gfp-russia.ru
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container">
+                <a class="navbar-brand logo_h" href="{% url 'home' %}">
+                    <img src="../../static/img/logotype.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <div class="row w-100">
+                        <div class="col-lg-12 pr-lg-0">
+                            <ul class="nav navbar-nav ml-auto justify-content-end">
+                                {% if user.is_superuser %}
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">Программа</a>
+                                </li>
+                                {% endif %}
+{#                                <li class="nav-item ">#}
+{#                                    <a class="nav-link" href="about.html">Руководство GFP</a>#}
+{#                                </li>#}
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="{% url 'sportsman' %}">ОН-ЛАЙН ЗАЯВКА</a>
+                                </li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Документы</a>
+                                    <ul class="dropdown-menu">
+                                        {% for document in documents %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.rules }}" target="_blank">Технические правила GFP</a>
+                                            </li>
+                                        {% endfor %}
+                                        {% for document in documents %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.rules_sfo }}" target="_blank">Техническе правила GFP СФО</a>
+                                            </li>
+                                        {% endfor %}
+                                        {% for document in documents %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.standards }}" target="_blank">Нормативы</a>
+                                            </li>
+                                        {% endfor %}
+{#                                        <li class="nav-item">#}
+{#                                            <a class="nav-link" href="elements.html">Рекорды</a>#}
+{#                                        </li>#}
+{#                                        <li class="nav-item">#}
+{#                                            <a class="nav-link" href="elements.html">Присвоенные звания (с ДК)</a>#}
+{#                                        </li>#}
+{#                                        <li class="nav-item">#}
+{#                                            <a class="nav-link" href="elements.html">Присвоенные звания (без ДК)</a>#}
+{#                                        </li>#}
+                                        {% for document in documents  %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.sports_regulations }}" target="_blank">Положения о присвоении званий GFP</a>
+                                            </li>
+                                        {% endfor %}
+                                        {% for document in documents  %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.norms_sports_titles_dk }}" target="_blank">Нормы для присвоения званий GFP (с ДК)</a>
+                                            </li>
+                                        {% endfor %}
+                                        {% for document in documents %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.norms_sports_titles_bez_dk }}" target="_blank">Нормы для присвоения званий GFP (без ДК)</a>
+                                            </li>
+                                        {% endfor %}
+                                        {% for document in documents %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.tests_secretary }}" target="_blank">Тесты для сдачи на секретаря</a>
+                                            </li>
+                                        {% endfor %}
+                                        {% for document in documents %}
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ document.tests_judge }}" target="_blank">Тесты для сдачи на судейство</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+{#                                <li class="nav-item">#}
+{#                                    <a class="nav-link" href="contact.html">Представительство и судьи</a>#}
+{#                                </li>#}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'photo_and_video' %}">Фото и видео</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'broadcast' %}"><i class="fa fa-youtube-play"></i> Трансляция</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'doping_testing' %}">ДОПИНГ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

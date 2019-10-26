@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../../static/img/logotype.png" type="image/png" />
+    <title>Заявка на участие</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../static/vendors/linericon/style.css" />
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../../static/vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="../../static/vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="../../static/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="../../static/css/style.css" />
+    <link rel="stylesheet" href="../../static/css/responsive.css" />
+
+<section class="home_banner_area banner-area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner_content d-flex flex-md-row flex-column">
+                        <div class="banner-left text-md-right">
+                            <h1 class="text-uppercase">Турниры<br><br></h1>
+                        </div>
+                        <div class="banner-right position-relative">
+                            <p>Здесь Вы можете ознакомиться с турнирами, которые федерация GFP провела</p>
+                            <span class="main_btn mt-4 mt-md-0" href="#">
+                                <a href="{% url 'home' %}" class="text-white">Домашняя</a>
+                                <i class="fa fa-arrow-right mx-2"></i>
+                                <a href="#" class="text-white">Турниры</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog_area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="blog_left_sidebar">
+                    <div class="blog_item_img">
+                        {% for image_item in tournaments.tournamentimage_set.all %}
+                        <img class="card-img rounded-0" src="{{ image_item.image.url }}" alt="">
+                        {% endfor %}
+                        <a href="#" class="text-center blog_item_date">
+                            <h3>{{ tournaments.end_time|date:"j" }}</h3>
+                            <p>{{ tournaments.end_time|date:"F" }}</p>
+                        </a>
+                    </div>
+                    <div class="blog_details">
+                        <a class="d-inline-block" href="blog-details.html">
+                            <h2>{{ tournaments.short_name }}</h2>
+                        </a>
+                        <p>{{ tournaments.description }}</p>
+                        <ul class="blog-info-link">
+                            <li><a href="#"><i class="fa fa-user"></i> AAAAA</a></li>
+                            <li><a href="#"><i class="fa fa-comment-o"></i> AAAAAAAAAA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote-area">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-12">
+                <div class="estimated-cost">
+                    <form class="form-wrap" action="{% url 'sportsman' %}" method="post">{% csrf_token %}
+                        <nav>
+                            <div class="nav nav-tabs justify-content-md-start justify-content-center" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-getEstimation-tab" data-toggle="tab" href="{% url 'sportsman' %}" role="tab" aria-controls="nav-getEstimation" aria-selected="true">Заявка на участие в турнире (* - поля отмечены для обязательного заполнения!)</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-getEstimation" role="tabpanel" aria-labelledby="nav-getEstimation-tab">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="lastName">* Фамилия:</label>
+                                            <input required type="text" class="form-control" name="{{ form.last_name.name }}" value="{{ request.POST.name}}" id="lastName" placeholder="Введите Вашу фамилию" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Введите Вашу фамилию'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                        <label for="firstName">* Имя:</label>
+                                        <input required type="text" class="form-control" name="{{ form.first_name.name }}" value="{{ request.POST.name}}" id="firstName" aria-describedby="emailHelp" placeholder="Введите своё имя"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите своё имя'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="middleName">* Отчество:</label>
+                                            <input required type="text" class="form-control" name="{{ form.middle_name.name }}" value="{{ request.POST.name}}" id="middleName" placeholder="Введите Ваше отчество" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Введите Ваше отчество'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="emailAddress">* Электронная почта:</label>
+                                            <input required type="email" class="form-control" name="{{ form.email.name }}" value="{{ request.POST.name }}" id="emailAddress" placeholder="Введеите Ваш email"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введеите Ваш email'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="phoneType">* Номер телефона:</label>
+                                            <input required type="tel" class="form-control" name="{{ form.phone.name }}" value="{{ request.POST.name }}" id="phoneType" placeholder="Введите номер телефона (без 8-ки)" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Введите номер телефона (без 8-ки)'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="dobType">* Дата рождения:</label>
+                                            <input required type="date" class="form-control" name="{{ form.dob.name }}" id="dobType" placeholder="Введите дату рождения" max="2005-01-01"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите дату рождения'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="country">* Страна:</label>
+                                            <input required type="text" class="form-control" name="{{ form.country.name }}" value="{{ request.POST.name}}" id="country" placeholder="Страна" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Страна...'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="region">* Регион:</label>
+                                            <input required type="text" class="form-control" name="{{ form.region.name }}" value="{{ request.POST.name}}" id="region" placeholder="Регион" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Регион'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="town">* Город:</label>
+                                            <input required type="text" class="form-control" name="{{ form.town.name }}" value="{{ request.POST.name}}" id="town" placeholder="Введите Ваше отчество" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Введите Ваше отчество'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="gender">* Пол:</label>
+                                                {{ form.gender }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="discipline">* Дисциплина:</label>
+                                                {{ form.discipline }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="devision">* Дивизон:</label>
+                                                {{ form.division }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="age">* Возрастная категория:</label>
+                                                {{ form.age }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="weight">* Весовая категория</label>
+                                                {{ form.weight }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="team">* Командно/Лично</label>
+                                                {{ form.team }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-select">
+                                            <label for="tournament">* Турнир</label>
+                                                {{ form.tournament }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="trainer">Тренер:</label>
+                                            <input class="form-control" name="{{ form.trainer.name }}" value="{{ request.POST.name}}" id="trainer" placeholder="Тренер" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Тренер'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mt-4">
+                                        <div class="text-center confirm_btn_box">
+                                          <button class="main_btn text-uppercase" value="OK" name="form">Отправить заявку</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="../../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../../static/js/popper.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="../../static/vendors/isotope/isotope-min.js"></script>
+    <script src="../../static/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../../static/js/jquery.ajaxchimp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="../../static/js/mail-script.js"></script>
+    <script src="../../static/js/custom.js"></script>
+
+{% endblock %}

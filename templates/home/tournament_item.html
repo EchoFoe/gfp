@@ -1,0 +1,25 @@
+<div class="single-service col-lg-4 col-md-6">
+    <div class="thumb">
+        <img class="f-img img-fluid mx-auto" src="{{ tournaments.image.url }}" alt="" />
+    </div>
+    <div class="service-box">
+        <p>{{ tournaments.tournament.start_time|date:"F j, Y" }}</p>
+        <h3>Турнир <br />{{ tournaments.tournament.short_name|truncatechars_html:80 }}</h3>
+        <p>{{ tournaments.tournament.name|truncatechars_html:80 }}</p>
+        <hr>
+{#        <a href="{% url 'tournament' tournaments.tournament.id %}">Он-лайн заявка</a>#}
+        {% if tournaments.tournament.provisions_dk %}
+            <br>
+            <a href="{{ tournaments.tournament.provisions_dk }}" target="_blank">Положение ДК</a>
+        {% endif %}
+        {% if tournaments.tournament.provisions_bezdk %}
+            <br>
+            <a href="{{ tournaments.tournament.provisions_bezdk }}" target="_blank">Положение без ДК</a>
+        {% endif %}
+        {% if tournaments.tournament.nominations %}
+            <br>
+            <a class="" href="{{ tournaments.tournament.nominations }}" target="_blank">Номинации</a>
+        {% endif %}
+        <br>
+    </div>
+</div>

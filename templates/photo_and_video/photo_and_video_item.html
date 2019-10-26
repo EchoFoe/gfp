@@ -1,0 +1,19 @@
+<article class="blog_item">
+    <div class="blog_item_img">
+        <img class="card-img rounded-0" src="{{ tournaments.image.url }}" alt="">
+        <a href="#" class="text-center blog_item_date">
+            <h3>{{ tournaments.tournament.end_time|date:"j" }}</h3>
+            <p>{{ tournaments.tournament.end_time|date:"F" }}</p>
+        </a>
+    </div>
+    <div class="blog_details">
+        <a class="d-inline-block" href="blog-details.html">
+            <h2>{{ tournaments.tournament.short_name }}</h2>
+        </a>
+        <p>{{ tournaments.tournament.description }}</p>
+{#        <ul class="blog-info-link">#}
+{#            <li><a href="#"><i class="fa fa-user"></i> AAAAA</a></li>#}
+{#            <li><a href="#"><i class="fa fa-comment-o"></i> AAAAAAAAAA</a></li>#}
+{#        </ul>#}
+    </div>
+</article>
