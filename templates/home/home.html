@@ -52,7 +52,7 @@
         </div>
         <div class="row">
         {% if new_tournaments %}
-            {% for tournaments in new_tournaments  %}
+            {% for tournaments in new_tournaments %}
                 {% include 'home/tournament_item.html' %}
             {% endfor %}
             {% else %}
@@ -76,7 +76,7 @@
                         <h1>Будьте в курсе всех предстоящих соревнований</h1>
                     </div>
                     <div class="">
-                        <a href="{% url 'sportsman' %}" class="main_btn">Заявиться!</a>
+                        <a href="{% url 'sportsman' %}" class="main_btn">Заявиться</a>
                     </div>
                 </div>
             </div>

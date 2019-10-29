@@ -5,8 +5,12 @@
     <div class="testi_author d-flex justify-content-center align-items-center">
         <div class="a-desc text-left">
             <h6 class="text-center">Дата начала турнира: {{ tournaments.tournament.start_time|date:"F j, Y" }}</h6>
-            <h6 class="text-center">Дата начала турнира: {{ tournaments.tournament.end_time|date:"F j, Y" }}</h6>
-            <p class="text-center">Город: {{ tournaments.tournament.town }}</p>
+            <h6 class="text-center">Дата окончания турнира: {{ tournaments.tournament.end_time|date:"F j, Y" }}</h6>
+            {% if tournaments.tournament.town %}
+                <p class="text-center">Город: {{ tournaments.tournament.town }}</p>
+            {% else %}
+                <p class="text-center">Город еще не назначен</p>
+            {% endif %}
         </div>
     </div>
 </div>
