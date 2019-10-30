@@ -2057,7 +2057,7 @@ ul {
 
 /* line 301, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_blog.scss */
 .blog-info-link li a {
-  color: #999999;
+  color: #f7941d;
 }
 
 /* line 304, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_blog.scss */
@@ -2072,6 +2072,7 @@ ul {
   content: "|";
   padding-left: 10px;
   padding-right: 10px;
+  color: #f8f8f8
 }
 
 /* line 314, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_blog.scss */
