@@ -55,6 +55,7 @@ class Tournament(models.Model):
         return "%s" % self.short_name
 
     class Meta:
+        ordering = ['-start_time']
         verbose_name = 'Турнир'
         verbose_name_plural = 'Турниры'
 
