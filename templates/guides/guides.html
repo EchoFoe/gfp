@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="home_banner_area banner-area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner_content d-flex flex-md-row flex-column">
+                        <div class="banner-left text-md-right">
+                            <h1 class="text-uppercase">Персонал GFP</h1>
+                        </div>
+                        <div class="banner-right position-relative">
+                            <p>Здесь Вы можете ознакомиться с руководством и судьями GFP</p>
+                            <span class="main_btn mt-4 mt-md-0" href="#">
+                                <a href="{% url 'home' %}" class="text-white">Домашняя</a>
+                                <i class="fa fa-arrow-right mx-2"></i>
+                                <a href="{% url 'guide' %}" class="text-white">Руководство GFP</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-blog-area">
+    <div class="container">
+        <div class="row justify-content-center section-title-wrap">
+            <div class="col-lg-12">
+                <h2 class="text-white">Руководство и судьи GFP</h2>
+            </div>
+        </div>
+        <div class="row">
+        {% if all_guides %}
+            {% for guides in all_guides %}
+                {% include 'guides/guide_item.html' %}
+            {% endfor %}
+            {% else %}
+                <div class="row justify-content-center section-title-wrap">
+                <div class="col-lg-12">
+                    <h3 class="text-white">А их и нет или программист неправильно написал код, чтобы они были</h3>
+                </div>
+                </div>
+        {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

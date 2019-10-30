@@ -240,6 +240,30 @@
    }
 },
 {
+   "model": "contenttypes.contenttype",
+   "pk": 31,
+   "fields": {
+      "app_label": "guide",
+      "model": "guidestatus"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 32,
+   "fields": {
+      "app_label": "guide",
+      "model": "guide"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 33,
+   "fields": {
+      "app_label": "guide",
+      "model": "guideimage"
+   }
+},
+{
    "model": "sessions.session",
    "pk": "0vgxmjszcqfpe3amcf1demlyn0dz7nbj",
    "fields": {
@@ -537,7 +561,7 @@
       "short_name": "\u041e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u0442\u0443\u0440\u043d\u0438\u0440 (26.09.2020)",
       "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
       "region": "\u041a\u0443\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c",
-      "town": "\u041a\u0443\u0440\u0441\u043a",
+      "town": "",
       "start_time": "2020-09-25T09:00:00Z",
       "end_time": "2020-09-26T09:00:00Z",
       "status": 1,
@@ -810,7 +834,7 @@
    "fields": {
       "laboratory": "\u0413\u0411\u0423\u0417 \"\u041d\u0418\u0418 \u0421\u043a\u043e\u0440\u043e\u0439 \u043f\u043e\u043c\u043e\u0449\u0438 \u0438\u043c. \u0421\u043a\u043b\u0438\u0444\u043e\u0441\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434\u0435\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u0430 \u0437\u0434\u0440\u0430\u0432\u043e\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u0433. \u041c\u043e\u0441\u043a\u0432\u044b\"",
       "illicit_drugs": "https://drive.google.com/open?id=1w_xO8bTthONiWDsVuV6JlL9iQOSUVUET",
-      "anti_doping_rules": "",
+      "anti_doping_rules": "https://drive.google.com/open?id=1GrA99_QBsm7FvqaAvVceq1wElEcY0Dv3",
       "is_active": true,
       "created": "2019-08-19T21:44:04Z",
       "updated": "2019-08-19T21:44:04Z"
@@ -947,14 +971,14 @@
    "pk": 1,
    "fields": {
       "name": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u0432 \u041c\u0415\u041d\u042e",
-      "rules": "https://drive.google.com/file/d/15H9iyOhTPlLa6ghJf0cDqy_Z130-TL9N/view?usp=sharing",
-      "rules_sfo": "https://drive.google.com/open?id=1ES5ugsHG4wtu28LkrXsZBXS450BQ4BY3",
-      "standards": "https://drive.google.com/open?id=1et5wFpAK2ZTTmeILWah6BvnTbkjoEg-z",
-      "sports_regulations": "https://drive.google.com/open?id=1jHUbvObgTj5DiPXnJ9202sXEhL23WUda",
-      "norms_sports_titles_dk": "https://drive.google.com/open?id=1eicF3tavTY2QRJvmopf_7c79V-LlbxKw",
-      "norms_sports_titles_bez_dk": "https://drive.google.com/open?id=1jIh8ZXDO0qwr3-JAH05IBzN-snnbttBe",
-      "tests_secretary": "https://drive.google.com/open?id=1zcUm6KrM2UVIJ0x8mZxTwe9fH7d-Te93",
-      "tests_judge": "https://drive.google.com/open?id=1vyYSTKvu4JSgFUk0sjBp0GO9AT2K5LH5",
+      "rules": "https://drive.google.com/open?id=15H9iyOhTPlLa6ghJf0cDqy_Z130-TL9N",
+      "rules_sfo": "https://drive.google.com/open?id=1E6qRZTiEyD7g3pO5gd0jmha3rLdkzH7W",
+      "standards": "https://drive.google.com/open?id=1H99g90RvyIvJXa3i3UiiEBAWA9cfuwei",
+      "sports_regulations": "https://drive.google.com/open?id=1YNrmutcj3qthchxFAovLMu6JFGlWbs_V",
+      "norms_sports_titles_dk": "https://drive.google.com/open?id=1f41Ie-E8nX44HnNYRbBCtEFlNEGvy1JZ",
+      "norms_sports_titles_bez_dk": "https://drive.google.com/open?id=1NBZ8NlRlAwJm_EwpbRXXPPhsdlx33hcw",
+      "tests_secretary": "https://drive.google.com/open?id=1ali3MTSnnMdZq5eSogIW5JrDWjmxzqBu",
+      "tests_judge": "https://drive.google.com/open?id=1h4MDbdqfywkIYb02PFoEAf8gu6DWhEN_",
       "is_active": true,
       "created": "2019-08-20T15:38:42Z",
       "updated": "2019-08-20T15:38:42Z"
@@ -6168,6 +6192,226 @@
    }
 },
 {
+   "model": "guide.guidestatus",
+   "pk": 1,
+   "fields": {
+      "name": "\u041f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442 Global Federation of Powerlifting",
+      "is_active": true,
+      "created": "2019-10-30T20:33:13.133Z",
+      "updated": "2019-10-30T20:33:13.133Z"
+   }
+},
+{
+   "model": "guide.guidestatus",
+   "pk": 2,
+   "fields": {
+      "name": "\u0412\u0438\u0446\u0435-\u043f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442 Global Federation of Powerlifting",
+      "is_active": true,
+      "created": "2019-10-30T20:43:06.486Z",
+      "updated": "2019-10-30T20:43:06.486Z"
+   }
+},
+{
+   "model": "guide.guidestatus",
+   "pk": 3,
+   "fields": {
+      "name": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u0441\u0443\u0434\u0435\u0439\u0441\u043a\u0438\u043c \u043a\u043e\u0440\u043f\u0443\u0441\u043e\u043c",
+      "is_active": true,
+      "created": "2019-10-30T20:47:32.449Z",
+      "updated": "2019-10-30T20:47:32.449Z"
+   }
+},
+{
+   "model": "guide.guidestatus",
+   "pk": 4,
+   "fields": {
+      "name": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u043a\u043e\u0440\u043f\u0443\u0441\u0430 \u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442\u043e\u0432",
+      "is_active": true,
+      "created": "2019-10-30T20:49:51.837Z",
+      "updated": "2019-10-30T20:49:51.837Z"
+   }
+},
+{
+   "model": "guide.guidestatus",
+   "pk": 5,
+   "fields": {
+      "name": "\u041d\u0435\u0442 \u0441\u0442\u0430\u0442\u0443\u0441\u0430",
+      "is_active": true,
+      "created": "2019-10-30T20:58:29.499Z",
+      "updated": "2019-10-30T20:58:29.499Z"
+   }
+},
+{
+   "model": "guide.guide",
+   "pk": 1,
+   "fields": {
+      "first_name": "\u0420\u043e\u043c\u0430\u043d",
+      "last_name": "\u041a\u043e\u043d\u0441\u0442\u0430\u043d\u0442\u0438\u043d\u043e\u0432",
+      "email": "konstantinov-r@yandex.ru",
+      "phone": "89611917111",
+      "dob": "1984-03-26",
+      "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+      "town": "\u041a\u0443\u0440\u0441\u043a",
+      "description": "\u041f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442 Global Federation of Powerlifting",
+      "status": 1,
+      "vk": "https://vk.com/id359911422",
+      "instagram": "https://www.instagram.com/konstantinov_gfp/",
+      "twitter": "",
+      "facebook": "",
+      "is_active": true,
+      "created": "2019-10-30T20:41:55.014Z",
+      "updated": "2019-10-30T20:41:55.014Z"
+   }
+},
+{
+   "model": "guide.guide",
+   "pk": 2,
+   "fields": {
+      "first_name": "\u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0430",
+      "last_name": "\u0416\u0438\u0433\u0443\u043b\u0438\u043d\u0430",
+      "email": "info@gfp-russia.ru",
+      "phone": "89038701401",
+      "dob": "2019-10-30",
+      "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+      "town": "\u041a\u0443\u0440\u0441\u043a",
+      "description": "\u0412\u0438\u0446\u0435-\u043f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442 Global Federation of Powerlifting, \u0441\u0443\u0434\u044c\u044f \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u043e\u0439 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438",
+      "status": 2,
+      "vk": "https://vk.com/poweruniversal",
+      "instagram": "https://www.instagram.com/vselennaia_sili/",
+      "twitter": "",
+      "facebook": "",
+      "is_active": true,
+      "created": "2019-10-30T20:45:38.096Z",
+      "updated": "2019-10-30T20:45:38.096Z"
+   }
+},
+{
+   "model": "guide.guide",
+   "pk": 3,
+   "fields": {
+      "first_name": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439",
+      "last_name": "\u0414\u043e\u0440\u043e\u0445\u0438\u043d",
+      "email": "dorokhinalexsey@gmail.com",
+      "phone": "89996071002",
+      "dob": "2019-10-30",
+      "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+      "town": "\u041a\u0443\u0440\u0441\u043a",
+      "description": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u0441\u0443\u0434\u0435\u0439\u0441\u043a\u0438\u043c \u043a\u043e\u0440\u043f\u0443\u0441\u043e\u043c, \u0441\u0443\u0434\u044c\u044f \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u043e\u0439 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438",
+      "status": 3,
+      "vk": "https://vk.com/id45532382",
+      "instagram": "",
+      "twitter": "",
+      "facebook": "",
+      "is_active": true,
+      "created": "2019-10-30T20:49:07.979Z",
+      "updated": "2019-10-30T20:49:07.979Z"
+   }
+},
+{
+   "model": "guide.guide",
+   "pk": 4,
+   "fields": {
+      "first_name": "\u0415\u0432\u0433\u0435\u043d\u0438\u0439",
+      "last_name": "\u0411\u043e\u043d\u0434\u0430\u0440\u0435\u0432",
+      "email": "bondorev.jeka@yandex.ru",
+      "phone": "89996056463",
+      "dob": "2019-10-30",
+      "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+      "town": "\u041a\u0443\u0440\u0441\u043a",
+      "description": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u043a\u043e\u0440\u043f\u0443\u0441\u0430 \u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442\u043e\u0432, \u0441\u0443\u0434\u044c\u044f \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438.",
+      "status": 4,
+      "vk": "https://vk.com/jen46",
+      "instagram": "",
+      "twitter": "",
+      "facebook": "",
+      "is_active": true,
+      "created": "2019-10-30T20:52:47.478Z",
+      "updated": "2019-10-30T20:52:47.478Z"
+   }
+},
+{
+   "model": "guide.guide",
+   "pk": 5,
+   "fields": {
+      "first_name": "\u0410\u043d\u0430\u0441\u0442\u0430\u0441\u0438\u044f",
+      "last_name": "\u0422\u0438\u0445\u043e\u043c\u0438\u0440\u043e\u0432\u0430",
+      "email": null,
+      "phone": null,
+      "dob": "2019-10-30",
+      "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+      "town": "\u041a\u0443\u0440\u0441\u043a",
+      "description": "\u0421\u0443\u0434\u044c\u044f \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438",
+      "status": 5,
+      "vk": "",
+      "instagram": "https://www.instagram.com/asya_dance_19/",
+      "twitter": "",
+      "facebook": "",
+      "is_active": true,
+      "created": "2019-10-30T20:58:38.618Z",
+      "updated": "2019-10-30T20:58:38.618Z"
+   }
+},
+{
+   "model": "guide.guideimage",
+   "pk": 1,
+   "fields": {
+      "guide": 1,
+      "image": "guide_images/konstantinov.jpg",
+      "is_main": true,
+      "is_active": true,
+      "created": "2019-10-30T20:41:55.281Z",
+      "updated": "2019-10-30T20:41:55.281Z"
+   }
+},
+{
+   "model": "guide.guideimage",
+   "pk": 2,
+   "fields": {
+      "guide": 2,
+      "image": "guide_images/zhigulina.jpg",
+      "is_main": true,
+      "is_active": true,
+      "created": "2019-10-30T20:45:38.111Z",
+      "updated": "2019-10-30T20:45:38.111Z"
+   }
+},
+{
+   "model": "guide.guideimage",
+   "pk": 3,
+   "fields": {
+      "guide": 3,
+      "image": "guide_images/dorohin.jpg",
+      "is_main": true,
+      "is_active": true,
+      "created": "2019-10-30T20:49:07.992Z",
+      "updated": "2019-10-30T20:49:07.992Z"
+   }
+},
+{
+   "model": "guide.guideimage",
+   "pk": 4,
+   "fields": {
+      "guide": 4,
+      "image": "guide_images/bondarev.jpg",
+      "is_main": true,
+      "is_active": true,
+      "created": "2019-10-30T20:52:47.491Z",
+      "updated": "2019-10-30T20:52:47.491Z"
+   }
+},
+{
+   "model": "guide.guideimage",
+   "pk": 5,
+   "fields": {
+      "guide": 5,
+      "image": "guide_images/tihomirova.jpg",
+      "is_main": true,
+      "is_active": true,
+      "created": "2019-10-30T20:58:38.631Z",
+      "updated": "2019-10-30T20:58:38.631Z"
+   }
+},
+{
    "model": "auth.permission",
    "pk": 1,
    "fields": {
@@ -7245,6 +7489,114 @@
       "name": "Can view sportsman in tournament",
       "content_type": 30,
       "codename": "view_sportsmanintournament"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 121,
+   "fields": {
+      "name": "Can add \u0421\u0442\u0430\u0442\u0443\u0441 \u0442\u0443\u0440\u043d\u0438\u0440\u0430",
+      "content_type": 31,
+      "codename": "add_guidestatus"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 122,
+   "fields": {
+      "name": "Can change \u0421\u0442\u0430\u0442\u0443\u0441 \u0442\u0443\u0440\u043d\u0438\u0440\u0430",
+      "content_type": 31,
+      "codename": "change_guidestatus"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 123,
+   "fields": {
+      "name": "Can delete \u0421\u0442\u0430\u0442\u0443\u0441 \u0442\u0443\u0440\u043d\u0438\u0440\u0430",
+      "content_type": 31,
+      "codename": "delete_guidestatus"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 124,
+   "fields": {
+      "name": "Can view \u0421\u0442\u0430\u0442\u0443\u0441 \u0442\u0443\u0440\u043d\u0438\u0440\u0430",
+      "content_type": 31,
+      "codename": "view_guidestatus"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 125,
+   "fields": {
+      "name": "Can add \u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c",
+      "content_type": 32,
+      "codename": "add_guide"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 126,
+   "fields": {
+      "name": "Can change \u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c",
+      "content_type": 32,
+      "codename": "change_guide"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 127,
+   "fields": {
+      "name": "Can delete \u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c",
+      "content_type": 32,
+      "codename": "delete_guide"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 128,
+   "fields": {
+      "name": "Can view \u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c",
+      "content_type": 32,
+      "codename": "view_guide"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 129,
+   "fields": {
+      "name": "Can add \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0430",
+      "content_type": 33,
+      "codename": "add_guideimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 130,
+   "fields": {
+      "name": "Can change \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0430",
+      "content_type": 33,
+      "codename": "change_guideimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 131,
+   "fields": {
+      "name": "Can delete \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0430",
+      "content_type": 33,
+      "codename": "delete_guideimage"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 132,
+   "fields": {
+      "name": "Can view \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0430",
+      "content_type": 33,
+      "codename": "view_guideimage"
    }
 },
 {
@@ -10245,6 +10597,240 @@
       "object_repr": "STAR WALL (25.12.2020)",
       "action_flag": 2,
       "change_message": "[{\"changed\": {\"fields\": [\"short_name\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 229,
+   "fields": {
+      "action_time": "2019-10-30T18:18:39.933Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "\u041e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u0442\u0443\u0440\u043d\u0438\u0440 (26.09.2020)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"town\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 230,
+   "fields": {
+      "action_time": "2019-10-30T19:13:30.829Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "Document object (1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"rules\", \"rules_sfo\", \"standards\", \"sports_regulations\", \"norms_sports_titles_dk\", \"norms_sports_titles_bez_dk\", \"tests_secretary\", \"tests_judge\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 231,
+   "fields": {
+      "action_time": "2019-10-30T20:33:13.135Z",
+      "user": 1,
+      "content_type": 31,
+      "object_id": "1",
+      "object_repr": "\u041f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442 Global Federation of Powerlifting",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 232,
+   "fields": {
+      "action_time": "2019-10-30T20:41:55.281Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "1",
+      "object_repr": "Guide object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043f\\u0435\\u0440\\u0441\\u043e\\u043d\\u0430\\u043b\\u0430\", \"object\": \"1\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 233,
+   "fields": {
+      "action_time": "2019-10-30T20:43:06.488Z",
+      "user": 1,
+      "content_type": 31,
+      "object_id": "2",
+      "object_repr": "\u0412\u0438\u0446\u0435-\u043f\u0440\u0435\u0437\u0438\u0434\u0435\u043d\u0442 Global Federation of Powerlifting",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 234,
+   "fields": {
+      "action_time": "2019-10-30T20:45:38.112Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "2",
+      "object_repr": "Guide object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043f\\u0435\\u0440\\u0441\\u043e\\u043d\\u0430\\u043b\\u0430\", \"object\": \"2\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 235,
+   "fields": {
+      "action_time": "2019-10-30T20:45:43.070Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "1",
+      "object_repr": "Guide object (1)",
+      "action_flag": 2,
+      "change_message": "[]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 236,
+   "fields": {
+      "action_time": "2019-10-30T20:46:41.314Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "2",
+      "object_repr": "Guide object (2)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"email\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 237,
+   "fields": {
+      "action_time": "2019-10-30T20:47:32.450Z",
+      "user": 1,
+      "content_type": 31,
+      "object_id": "3",
+      "object_repr": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u0441\u0443\u0434\u0435\u0439\u0441\u043a\u0438\u043c \u043a\u043e\u0440\u043f\u0443\u0441\u043e\u043c",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 238,
+   "fields": {
+      "action_time": "2019-10-30T20:49:07.993Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "3",
+      "object_repr": "Guide object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043f\\u0435\\u0440\\u0441\\u043e\\u043d\\u0430\\u043b\\u0430\", \"object\": \"3\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 239,
+   "fields": {
+      "action_time": "2019-10-30T20:49:28.246Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "3",
+      "object_repr": "Guide object (3)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"dob\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 240,
+   "fields": {
+      "action_time": "2019-10-30T20:49:51.838Z",
+      "user": 1,
+      "content_type": 31,
+      "object_id": "4",
+      "object_repr": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u043a\u043e\u0440\u043f\u0443\u0441\u0430 \u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442\u043e\u0432",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 241,
+   "fields": {
+      "action_time": "2019-10-30T20:52:47.492Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "4",
+      "object_repr": "Guide object (4)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043f\\u0435\\u0440\\u0441\\u043e\\u043d\\u0430\\u043b\\u0430\", \"object\": \"4\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 242,
+   "fields": {
+      "action_time": "2019-10-30T20:53:39.629Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "3",
+      "object_repr": "Guide object (3)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 243,
+   "fields": {
+      "action_time": "2019-10-30T20:53:58.746Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "2",
+      "object_repr": "Guide object (2)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 244,
+   "fields": {
+      "action_time": "2019-10-30T20:58:29.500Z",
+      "user": 1,
+      "content_type": 31,
+      "object_id": "5",
+      "object_repr": "\u041d\u0435\u0442 \u0441\u0442\u0430\u0442\u0443\u0441\u0430",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 245,
+   "fields": {
+      "action_time": "2019-10-30T20:58:38.632Z",
+      "user": 1,
+      "content_type": 32,
+      "object_id": "5",
+      "object_repr": "\u0422\u0438\u0445\u043e\u043c\u0438\u0440\u043e\u0432\u0430",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043f\\u0435\\u0440\\u0441\\u043e\\u043d\\u0430\\u043b\\u0430\", \"object\": \"5\"}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 246,
+   "fields": {
+      "action_time": "2019-10-30T22:16:55.590Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "\u0414\u043e\u043f\u0438\u043d\u0433 \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435: \u0413\u0411\u0423\u0417 \"\u041d\u0418\u0418 \u0421\u043a\u043e\u0440\u043e\u0439 \u043f\u043e\u043c\u043e\u0449\u0438 \u0438\u043c. \u0421\u043a\u043b\u0438\u0444\u043e\u0441\u043e\u0432\u0441\u043a\u043e\u0433\u043e \u0434\u0435\u043f\u0430\u0440\u0442\u0430\u043c\u0435\u043d\u0442\u0430 \u0437\u0434\u0440\u0430\u0432\u043e\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u0433. \u041c\u043e\u0441\u043a\u0432\u044b\"",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"anti_doping_rules\"]}}]"
    }
 }
 ]

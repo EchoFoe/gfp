@@ -10,7 +10,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-INSTALLED_APPS = [
+INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'sportsman',
     'emails',
     'utils',
-]
+    'guide',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

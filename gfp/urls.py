@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^', include('doping_testing.urls')),
     url(r'^', include('sportsman.urls')),
     url(r'^', include('tournaments.urls')),
+    url(r'^', include('guide.urls')),
 ]\
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
               + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

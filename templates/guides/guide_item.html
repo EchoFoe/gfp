@@ -1,0 +1,43 @@
+<div class="col-lg-4 col-md-6">
+    <div class="single-home-blog">
+        <div class="thumb">
+            <img class="f-img img-fluid mx-auto" src="{{ guides.image.url }}" alt="">
+        </div>
+        <div class="home-blog-box">
+            <h4>{{ guides.guide.first_name }} {{ guides.guide.last_name }}</h4>
+            {% if guides.guide.description %}
+                <p>{{ guides.guide.description }}</p>
+            {% endif %}
+{#            {% if guides.guide.phone %}#}
+{#                <p><i class="fa fa-phone-square"> {{ guides.guide.phone }}</i></p>#}
+{#            {% endif %}#}
+{#            {% if guides.guide.email %}#}
+{#                <p><i class="fa fa-envelope"> {{ guides.guide.email }}</i></p>#}
+{#            {% endif %}#}
+            <div class="bottom d-flex">
+                {% if guides.guide.phone %}
+                    <a>Тел.: {{ guides.guide.phone }}</a>
+                {% endif %}
+            </div>
+            <div class="bottom d-flex">
+                {% if guides.guide.email %}
+                    <a>Почта: {{ guides.guide.email }}</a>
+                {% endif %}
+            </div>
+            <div class="bottom d-flex">
+                {% if guides.guide.instagram %}
+                    <a href="{{ guides.guide.instagram }}"><i class="fa fa-instagram"></i></a>
+                {% endif %}
+                {% if guides.guide.vk %}
+                    <a href="{{ guides.guide.vk }}"><i class="fa fa-vk"></i></a>
+                {% endif %}
+                {% if guides.guide.facebook %}
+                    <a href="{{ guides.guide.facebook }}"><i class="fa fa-facebook"></i></a>
+                {% endif %}
+                {% if guides.guide.twitter %}
+                    <a href="{{ guides.guide.twitter }}"><i class="fa fa-twitter"></i></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
