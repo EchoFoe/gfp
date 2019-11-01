@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="home_banner_area banner-area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="banner_content d-flex flex-md-row flex-column">
+                        <div class="banner-left text-md-right">
+                            <h1 class="text-uppercase">Регион.<br>предст-во</h1>
+                        </div>
+                        <div class="banner-right position-relative">
+                            <p>Здесь можно оставить заявку на представительство для проведения соревнований в Вашем регионе</p>
+                            <span class="main_btn mt-4 mt-md-0" href="#">
+                                <a href="{% url 'home' %}" class="text-white">Домашняя</a>
+                                <i class="fa fa-arrow-right mx-2"></i>
+                                <a href="{% url 'regional_representation' %}" class="text-white">Рег. представительство</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote-area">
+    <div class="container">
+    <div class="row justify-content-between align-items-center">
+        <div class="col-lg-12">
+            <div class="estimated-cost">
+                <form class="form-wrap" action="#" method="post">{% csrf_token %}
+                    <nav>
+                            <div class="nav nav-tabs justify-content-md-start justify-content-center" id="nav-tab" role="tablist">
+                                <h1 class="nav-item nav-link active" id="nav-getEstimation-tab" data-toggle="tab" href="{% url 'sportsman' %}" role="tab" aria-controls="nav-getEstimation" aria-selected="true">Заявка на региональное представительство (* - поля отмечены для обязательного заполнения!)<br>Отправляя персональные данные, Вы соглашаетесь на их обработку</h1>
+                            </div>
+                        </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-getEstimation" role="tabpanel" aria-labelledby="nav-getEstimation-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                    <label for="firstName">* Имя:</label>
+                                    <input required type="text" class="form-control" name="{{ form.first_name.name }}" value="{{ request.POST.name}}" id="firstName" aria-describedby="emailHelp" placeholder="Введите своё имя"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите своё имя'" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName">* Фамилия:</label>
+                                        <input required type="text" class="form-control" name="{{ form.last_name.name }}" value="{{ request.POST.name}}" id="lastName" placeholder="Введите Вашу фамилию" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Введите Вашу фамилию'" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="middleName">* Отчество:</label>
+                                        <input required type="text" class="form-control" name="{{ form.middle_name.name }}" value="{{ request.POST.name}}" id="middleName" placeholder="Введите Ваше отчество" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Введите Ваше отчество'" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="emailAddress">* Электронная почта:</label>
+                                        <input required type="email" class="form-control" name="{{ form.email.name }}" value="{{ request.POST.name }}" id="emailAddress" placeholder="Введеите Ваш email"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введеите Ваш email'" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="phoneType">* Номер телефона:</label>
+                                        <input required type="tel" class="form-control" name="{{ form.phone.name }}" value="{{ request.POST.name }}" id="phoneType" placeholder="Введите номер телефона (без 8-ки)" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Введите номер телефона (без 8-ки)'" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="dobType">* Дата рождения:</label>
+                                        <input required type="date" class="form-control" name="{{ form.dob.name }}" id="dobType" placeholder="Введите дату рождения" max="2005-01-01"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите дату рождения'" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mt-4">
+                                    <div class="text-center confirm_btn_box">
+                                      <button class="main_btn text-uppercase">Отправить заявку</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}
