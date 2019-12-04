@@ -34,13 +34,14 @@ def sportsman(request):
         region = data.get('region')
         town = data.get('town')
         team = data.get('team')
+        team_name = data.get('team_name')
         trainer = data.get('trainer')
         tournament = data.get('tournament')
         division = data.get('division')
         discipline = data.get('discipline')
 
         # user, created = User.objects.get_or_create(username=phone, defaults={"first_name": first_name, "email": email})
-        order = Sportsman.objects.create(first_name=first_name, last_name=last_name, middle_name=middle_name, email=email, phone=phone, dob=dob, gender_id=gender, weight_id=weight, age_id=age, country=country, region=region, town=town, team_id=team, trainer=trainer, tournament_id=tournament, division_id=division, discipline_id=discipline)
+        order = Sportsman.objects.create(first_name=first_name, last_name=last_name, middle_name=middle_name, email=email, phone=phone, dob=dob, gender_id=gender, weight_id=weight, age_id=age, country=country, region=region, town=town, team_id=team, trainer=trainer, tournament_id=tournament, division_id=division, discipline_id=discipline, team_name=team_name)
         # order = Sportsman.objects.update()
 
         email = SendingEmail()

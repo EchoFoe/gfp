@@ -117,9 +117,9 @@ class SportsmenResource(resources.ModelResource):
 class SportsmenAdmin(ImportExportActionModelAdmin):
     save_as = True
     resource_class = SportsmenResource
-    fields = [('last_name', 'first_name', 'middle_name'), ('phone', 'email', 'gender'), ('country', 'region', 'town'), ('dob', 'age'), ('weight', 'raised_weight', 'wilkes'), 'division', 'discipline', 'tournament', 'status', 'is_active', ('created', 'updated')]
-    list_display = ['last_name', 'first_name', 'age', 'weight', 'is_active', 'wilkes']
-    list_editable = ['is_active', 'wilkes']
+    fields = [('last_name', 'first_name', 'middle_name'), ('phone', 'email', 'gender'), ('country', 'region', 'town'), ('dob', 'age'), ('weight', 'raised_weight', 'wilkes'), 'division', 'discipline', 'tournament', ('team', 'team_name'), 'status', 'is_active', ('created', 'updated')]
+    list_display = ['last_name', 'first_name', 'age', 'weight', 'is_active', 'wilkes', 'team_name']
+    list_editable = ['is_active', 'wilkes', 'team_name']
     list_filter = ['tournament', 'division', 'discipline', 'gender', 'status']
     search_fields = ['first_name', 'last_name', 'middle_name']
 

@@ -123,6 +123,7 @@ class Sportsman(models.Model):
     region = models.CharField(max_length=64, blank=True, null=True, default=None, verbose_name='Регион')
     town = models.CharField(max_length=64, blank=True, null=True, default=None, verbose_name='Город')
     team = models.ForeignKey(Line_up, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Команда/Лично')
+    team_name = models.CharField(max_length=64, blank=True, null=True, default=None, verbose_name='Название команды')
     trainer = models.CharField(max_length=64, blank=True, null=True, default=None, verbose_name='Тренер')
     tournament = models.ForeignKey(Tournament, null=True, blank=True, default=True, on_delete=models.CASCADE, verbose_name='Турнир')
     division = models.ForeignKey(Division, blank=True, null=True, default=True, on_delete=models.CASCADE, verbose_name='Дивизион')

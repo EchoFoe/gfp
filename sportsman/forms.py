@@ -18,6 +18,7 @@ class SportsmenForm(forms.ModelForm):
     division = forms.ModelChoiceField(queryset=Division.objects.filter(is_active=True), required=True)
     discipline = forms.ModelChoiceField(queryset=Discipline.objects.filter(is_active=True), required=True)
     team = forms.ModelChoiceField(queryset=Line_up.objects.filter(is_active=True), required=True)
+    team_name = forms.CharField(required=False)
     gender = forms.ModelChoiceField(queryset=Gender.objects.filter(is_active=True), required=True)
     trainer = forms.CharField(required=False)
 

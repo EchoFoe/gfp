@@ -160,6 +160,13 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="town">Название команды:</label>
+                                            <input required type="text" class="form-control" name="{{ form.team_name.name }}" value="{{ request.POST.name}}" id="team_name" placeholder="Введите название команды" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Введите название команды'" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
                                         <div class="form-select">
                                             <label for="tournament">* Турнир</label>
                                                 {{ form.tournament }}
