@@ -11,9 +11,32 @@
             <h2>{{ tournaments.tournament.short_name }}</h2>
         </a>
         <p>{{ tournaments.tournament.description }}</p>
-{#        <ul class="blog-info-link">#}
-{#            <li><a href="#"><i class="fa fa-user"></i> AAAAA</a></li>#}
-{#            <li><a href="#"><i class="fa fa-comment-o"></i> AAAAAAAAAA</a></li>#}
-{#        </ul>#}
+        <ul class="blog-info-link">
+            {% if tournaments.tournament.provisions_dk %}
+                <li><a href="{{ tournaments.tournament.provisions_dk }}" target="_blank"><i class="fa fa-book"></i> Положения с допинг-контролем</a></li>
+            {% else %}
+                <li><a href="#"><i class="fa fa-warning"></i> Положения с ДК появятся позже</a></li>
+            {% endif %}
+            {% if tournaments.tournament.provisions_bezdk %}
+                <li><a href="{{ tournaments.tournament.provisions_bezdk }}" target="_blank"><i class="fa fa-book"></i> Положения без допинг-контроля</a></li>
+            {% else %}
+                <li><a href="#"><i class="fa fa-warning"></i> Положения без ДК появятся позже</a></li>
+            {% endif %}
+            {% if tournaments.tournament.results %}
+                <li><a href="{{ tournaments.tournament.results }}" target="_blank"><i class="fa fa-book"></i> Итоги турнира</a></li>
+            {% else %}
+                <li><a href="#"><i class="fa fa-warning"></i> Итоги появятся позже</a></li>
+            {% endif %}
+            {% if tournaments.tournament.nomnations %}
+                <li><a href="{{ tournaments.tournament.nominations }}" target="_blank"><i class="fa fa-book"></i> Номинации</a></li>
+            {% else %}
+                <li><a href="#"><i class="fa fa-warning"></i> Номинации появятся позже</a></li>
+            {% endif %}
+            {% if tournaments.tournament.regulations %}
+                <li><a href="{{ tournaments.tournament.regulations }}" target="_blank"><i class="fa fa-book"></i> Регламент турнира</a></li>
+            {% else %}
+                <li><a href="#"><i class="fa fa-warning"></i> Регламент появятся позже</a></li>
+            {% endif %}
+        </ul>
     </div>
 </article>

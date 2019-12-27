@@ -36,6 +36,9 @@ class Tournament(models.Model):
                                        verbose_name='Положения на турнир без допинг-контроля')
     nominations = models.URLField(max_length=1024, blank=True, default=None, null=None,
                                   verbose_name='Номинации на турнир')
+    regulations = models.URLField(max_length=1024, blank=True, default=None, null=True,
+                                  verbose_name='Регламент на турнир')
+    results = models.URLField(max_length=1024, blank=True, default=None, null=True, verbose_name='Итоги турнира')
     photo_vk = models.URLField(max_length=1024, blank=True, default=None, null=None, verbose_name='Ссылка на альбом VK')
     video_youtube = models.URLField(max_length=1024, blank=True, default=None, null=None,
                                     verbose_name='Ссылка на видео YOUTUBE')

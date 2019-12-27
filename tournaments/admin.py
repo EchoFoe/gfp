@@ -36,7 +36,7 @@ class TournamentAdmin (ImportExportActionModelAdmin):
     save_as = True
     resource_class = TournamentResource
     fields = [('name', 'short_name', 'status'), ('country', 'region', 'town'), ('start_time', 'end_time'),
-              'sponsors', 'description', ('provisions_dk', 'provisions_bezdk', 'nominations'), ('photo_vk', 'video_youtube'), 'is_active']
+              'sponsors', 'description', ('provisions_dk', 'provisions_bezdk', 'nominations'), ('regulations', 'results'), ('photo_vk', 'video_youtube'), 'is_active']
     list_display = ['Турнир', 'town', 'start_time', 'end_time', 'status']
     list_editable = ['status', 'start_time', 'end_time']
     inlines = [TournamentImageInline]
