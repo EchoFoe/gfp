@@ -98,7 +98,7 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="dobType">* Дата рождения:</label>
-                                            <input required type="date" class="form-control" name="{{ form.dob.name }}" id="dobType" placeholder="Введите дату рождения" max="2005-01-01"
+                                            <input required type="date" class="form-control" name="{{ form.dob.name }}" id="dobType" placeholder="Введите дату рождения" max="2007-01-01"
                                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите дату рождения'" />
                                         </div>
                                     </div>
@@ -161,8 +161,8 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label for="town">Название команды:</label>
-                                            <input required type="text" class="form-control" name="{{ form.team_name.name }}" value="{{ request.POST.name}}" id="team_name" placeholder="Введите название команды" onfocus="this.placeholder = ''"
+                                            <label for="team_name">Название команды:</label>
+                                            <input class="form-control" name="{{ form.team_name.name }}" value="{{ request.POST.name}}" id="team_name" placeholder="Введите название команды" onfocus="this.placeholder = ''"
                                                 onblur="this.placeholder = 'Введите название команды'" />
                                         </div>
                                     </div>
