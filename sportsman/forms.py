@@ -14,7 +14,7 @@ class SportsmenForm(forms.ModelForm):
     town = forms.CharField(required=True)
     age = forms.ModelChoiceField(queryset=Age_category.objects.filter(is_active=True), required=True)
     weight = forms.ModelChoiceField(queryset=Weight_category.objects.filter(is_active=True), required=True)
-    tournament = forms.ModelChoiceField(queryset=Tournament.objects.filter(status_id=1), required=True)
+    tournament = forms.ModelChoiceField(queryset=Tournament.objects.filter(status_id=2), required=True)
     division = forms.ModelChoiceField(queryset=Division.objects.filter(is_active=True), required=True)
     discipline = forms.ModelChoiceField(queryset=Discipline.objects.filter(is_active=True), required=True)
     team = forms.ModelChoiceField(queryset=Line_up.objects.filter(is_active=True), required=True)
