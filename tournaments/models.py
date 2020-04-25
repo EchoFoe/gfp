@@ -78,7 +78,3 @@ class TournamentImage(models.Model):
     class Meta:
         verbose_name = 'Фотография турнира'
         verbose_name_plural = 'Фотографии турниров'
-
-
-class SportsmanInTournament(models.Model):
-    tournament = models.ForeignKey(Tournament, blank=True, null=True, default=None, on_delete=models.CASCADE, verbose_name='Турнир')

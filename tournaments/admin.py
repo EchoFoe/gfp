@@ -55,7 +55,7 @@ class TournamentImageAdmin (admin.ModelAdmin):
     list_display = ['tournament', 'image', 'is_main', 'is_active', 'created']
     list_editable = ['is_main', 'is_active']
     list_filter = ['is_main', 'is_active', 'tournament']
-    change_list_template = ['tournament']
+    # change_list_template = ['tournament']
 
     class Meta:
         model = TournamentImage
